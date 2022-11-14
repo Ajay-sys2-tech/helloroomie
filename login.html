@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello Roomie Login</title>
+        <!-- <link rel="icon" type="image/x-icon" href="/images/frontend/favicon.ico"> -->
+
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+        <!-- <script src="less.js" type="text/javascript"></script> -->
+
+        <!-- <link rel="stylesheet" href="css/login.scss"> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    </head>
+
+    <!-------------------------------------------HEADER SECTION HAI YE ----------->
+
+    <body>
+        <div class="wrapper">
+            <div class="login-text">
+              <button class="cta"><i class="fas fa-chevron-down fa-1x"></i></button>
+              <div class="text">
+                <a href="">Login</a>
+                <hr>
+                <br>
+                <input type="text" placeholder="Username">
+                <br>
+                <input type="password" placeholder="Password">
+                <br>
+                <button class="login-btn">Log In</button>
+                <button class="signup-btn">Sign Up</button>
+              </div>
+            </div>
+            <div class="call-text">
+              <h1>Show us your <span>creative</span> side</h1>
+              <button>Join the Community</button>
+            </div>
+          
+          </div>
+
+        <script>
+            // var Loginform = document.getElementById("Loginform");
+            // var regform = document.getElementById("regform");
+            // var indicator = document.getElementById("indicator");
+
+            // function register(){
+            //     regform.style.transform ="translateX(0px)";
+            //     Loginform.style.transform ="translateX(0px)";
+            //     indicator.style.transform ="translateX(100px)";
+            // }
+
+            // function login(){
+            //     regform.style.transform ="translateX(300px)";
+            //     Loginform.style.transform ="translateX(300px)";
+            //     indicator.style.transform ="translateX(0px)";
+            // }
+
+
+            // new js
+
+            var cta = document.querySelector(".cta");
+            var check = 0;
+
+            cta.addEventListener('click', function(e){
+                var text = e.target.nextElementSibling;
+                var loginText = e.target.parentElement;
+                text.classList.toggle('show-hide');
+                loginText.classList.toggle('expand');
+                if(check == 0)
+                {
+                    cta.innerHTML = "<i class=\"fas fa-chevron-up\"></i>";
+                    check++;
+                }
+                else
+                {
+                    cta.innerHTML = "<i class=\"fas fa-chevron-down\"></i>";
+                    check = 0;
+                }
+            })
+        </script>
+        
+    </body>
+</html>
